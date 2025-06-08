@@ -44,8 +44,8 @@ const userSchema = new Schema({
     refreshToken : {
         type : String , 
     }
-} , {timestamps  :true})
-
+} , {timestamps : true})
+ 
 
 userSchema.pre("save" , async function(req , res , next) {
     if( ! this.isModified("password")){
